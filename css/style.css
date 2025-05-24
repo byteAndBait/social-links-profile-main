@@ -1,0 +1,79 @@
+@font-face{
+    font-family: Inter;
+    src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+}
+:root{
+    --body-back-color : hsl(0, 0%, 8%);
+    --container-back-color: hsl(0, 0%, 12%);
+    --container-link-back-color: hsl(0, 0%, 20%);
+    --primary-color: hsl(75, 94%, 57%);
+}
+/* Global Rules */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Inter;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display:grid;
+    place-items: center;
+    background: var(--body-back-color)
+}
+.container{
+    width: 25rem;
+    background: var(--container-back-color);
+    padding: 2.5em 2em;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: white;
+}
+.container img{
+    max-width: 100%;
+}
+.container figure{
+    width: 100px;
+    margin: .5em 0;
+}
+.container figure img{
+    border-radius: 50%;
+}
+.container .name{
+    font-weight: 700;
+    margin: .5em 0;
+
+}
+.container .address{
+    color: var(--primary-color);
+    font-weight: 700;   
+    font-size: 14px;
+}
+.container .about{
+    margin: 2em 0;
+}
+.container .links{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    width: 100%;
+
+}
+.container .links .link{
+    background: var(--container-link-back-color);
+    text-align: center;
+    padding: 1em;
+    color:white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: .5s;
+}
+.container .links .link:hover{
+    color : var(--primary-color);
+    box-shadow: 0 0 2px var(--primary-color)
+}
+
