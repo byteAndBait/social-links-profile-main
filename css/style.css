@@ -23,55 +23,62 @@ body{
     background: var(--body-back-color)
 }
 .container{
-    width: 25rem;
+    max-width: 400px;
     background: var(--container-back-color);
-    padding: 2.5em 2em;
+    padding: 20px 10px;
     border-radius: 10px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    color: white;
+    color:white;
+    text-align: center;;
 }
-.container img{
-    max-width: 100%;
+@media (min-width: 800px){
+    .container{
+        width: 400px;
+    }
 }
 .container figure{
-    width: 100px;
-    margin: .5em 0;
+    width: 80px;
+    margin: 20px auto;
 }
 .container figure img{
+    max-width: 100%;
     border-radius: 50%;
 }
+
 .container .name{
-    font-weight: 700;
-    margin: .5em 0;
+    font-weight: 600;
+    margin: 10px 0;
 
 }
 .container .address{
     color: var(--primary-color);
-    font-weight: 700;   
-    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 .container .about{
-    margin: 2em 0;
+    font-size: 14px;
+    color: white;
+    opacity: .7;
+    margin-bottom: 25px;
 }
 .container .links{
-    display: flex;
-    flex-direction: column;
-    gap:1em;
-    width: 100%;
-
+    margin: 0 auto;
 }
 .container .links .link{
     background: var(--container-link-back-color);
     text-align: center;
-    padding: 1em;
+    padding: 15px 10px;
+    width: 80%;
+    display:block;
     color:white;
     text-decoration: none;
     font-weight: 700;
     border-radius: 10px;
     transition: .5s;
+    margin: 10px auto;
+    -webkit-tap-highlight-color: transparent;
+
 }
+
 .container .links .link:hover{
     color : var(--primary-color);
     box-shadow: 0 0 2px var(--primary-color)
